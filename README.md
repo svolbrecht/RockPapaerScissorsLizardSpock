@@ -1,1 +1,1 @@
-# RockPapaerScissorsLizardSpock
+# RockPaperScissorsLizardSpock
