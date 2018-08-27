@@ -98,11 +98,11 @@ namespace RPSLS
         {
             if(player1.score == 2)
             {
-                Console.WriteLine("player1 wins");
+                Console.WriteLine("\nPlayer1 wins");
             }
             else if(player2.score == 2)
             {
-                Console.WriteLine("player2 wins");
+                Console.WriteLine("\nPlayer2 wins");
             }
             else
             {
@@ -114,7 +114,7 @@ namespace RPSLS
 
         public void PlayAgain()
         {
-            Console.WriteLine("Would you like to play again? \n If yes, press '1' \n If no, press '2'");
+            Console.WriteLine("\nWould you like to play again? \n If yes, press '1' \n If no, press '2'");
             string userInput = Console.ReadLine();
 
             if (userInput == "1")
@@ -123,7 +123,7 @@ namespace RPSLS
             }
             else
             {
-                Console.WriteLine("Goodbye");
+                Console.WriteLine("\nGoodbye");
             }
 
 
