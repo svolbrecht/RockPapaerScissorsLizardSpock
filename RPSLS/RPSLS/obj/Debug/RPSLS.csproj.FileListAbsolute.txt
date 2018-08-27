@@ -1,0 +1,7 @@
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\bin\Debug\RPSLS.exe.config
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\bin\Debug\RPSLS.exe
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\bin\Debug\RPSLS.pdb
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\obj\Debug\RPSLS.exe
+C:\Users\svolb\Desktop\DCCmaterials\RockPaperScissorsLizardSpock\RPSLS\RPSLS\obj\Debug\RPSLS.pdb
