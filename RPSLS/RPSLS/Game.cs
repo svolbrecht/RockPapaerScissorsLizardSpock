@@ -65,25 +65,31 @@ namespace RPSLS
             }
             else if (player1.gesture == 2 && (player2.gesture == 1 || player2.gesture == 5))
             {
+                Console.WriteLine("player1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 3 && (player2.gesture == 3 || player2.gesture == 4))
             {
+                Console.WriteLine("player1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
+                Console.WriteLine("player1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 3))
             {
+                Console.WriteLine("player1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == player2.gesture)
             {
+                Console.WriteLine("round is a tie");
             }
             else
             {
+                Console.WriteLine("player2 wins round");
                 player2.score += 1;
             }
         }
