@@ -20,7 +20,7 @@ namespace RPSLS
         //member methods
         public void DisplayGestures()
         {
-            Console.WriteLine("Possible Gestures");
+            Console.WriteLine("\nPossible Gestures");
             possibleGestures.ForEach(Console.WriteLine);
         }
     
@@ -30,7 +30,7 @@ namespace RPSLS
         }
         public void GetNumberOfPlayers()
         {
-            Console.WriteLine("How many players? Please enter '1' or '2'");
+            Console.WriteLine("\nHow many players? Please enter '1' or '2'");
 
             switch (Console.ReadLine())
             {
@@ -60,36 +60,36 @@ namespace RPSLS
         {
             if (player1.gesture == 1 && (player2.gesture == 3|| player2.gesture == 4))
             {
-                Console.WriteLine("player1 wins round");
+                Console.WriteLine("\nPlayer1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 2 && (player2.gesture == 1 || player2.gesture == 5))
             {
-                Console.WriteLine("player1 wins round");
+                Console.WriteLine("\nPlayer1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 3 && (player2.gesture == 3 || player2.gesture == 4))
             {
-                Console.WriteLine("player1 wins round");
+                Console.WriteLine("\nPlayer1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
-                Console.WriteLine("player1 wins round");
+                Console.WriteLine("\nPlayer1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 3))
             {
-                Console.WriteLine("player1 wins round");
+                Console.WriteLine("\nPlayer1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == player2.gesture)
             {
-                Console.WriteLine("round is a tie");
+                Console.WriteLine("\nRound is a tie");
             }
             else
             {
-                Console.WriteLine("player2 wins round");
+                Console.WriteLine("\nPlayer2 wins round");
                 player2.score += 1;
             }
         }
@@ -112,6 +112,23 @@ namespace RPSLS
             }
         }
 
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to play again? \n If yes, press '1' \n If no, press '2'");
+            string userInput = Console.ReadLine();
+
+            if (userInput == "1")
+            {
+                PlayGame();
+            }
+            else
+            {
+                Console.WriteLine("Goodbye");
+            }
+
+
+        }
+
         public void PlayGame()
         {
             DisplayRules();
@@ -120,7 +137,7 @@ namespace RPSLS
             PlayRound();
             CompareGestures();
             CompareScore();
-
+            PlayAgain();
         }
     }
     

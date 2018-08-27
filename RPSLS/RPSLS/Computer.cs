@@ -14,7 +14,7 @@ namespace RPSLS
        
         public override void GetPlayerInput()
         {
-            Console.WriteLine("Please enter your ATTACK: \n 1) Rock \n 2) Scissors \n 3) Paper \n 4) Lizard \n 5) Spock:");
+            Console.WriteLine("\nPlease enter your ATTACK: \n 1) Rock \n 2) Scissors \n 3) Paper \n 4) Lizard \n 5) Spock:");
             int number = randomGesture.Next(1, 5);
 
                 switch(number)
