@@ -24,7 +24,11 @@ namespace RPSLS
             possibleGestures.ForEach(Console.WriteLine);
         }
     
-    public void GetNumberOfPlayers()
+        public void DisplayRules()
+        {
+            Console.WriteLine("Rules: \n Rock crushes Scissors \n Paper covers Rock  \n Scissors cuts Paper \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock");
+        }
+        public void GetNumberOfPlayers()
         {
             Console.WriteLine("How many players? Please enter '1' or '2'");
 
@@ -56,6 +60,7 @@ namespace RPSLS
         {
             if (player1.gesture == 1 && (player2.gesture == 3|| player2.gesture == 4))
             {
+                Console.WriteLine("player1 wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 2 && (player2.gesture == 1 || player2.gesture == 5))
@@ -96,11 +101,14 @@ namespace RPSLS
             else
             {
                 PlayRound();
+                CompareGestures();
+                CompareScore();
             }
         }
 
         public void PlayGame()
         {
+            DisplayRules();
             DisplayGestures();
             GetNumberOfPlayers();
             PlayRound();
