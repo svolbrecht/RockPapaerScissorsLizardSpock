@@ -11,7 +11,13 @@ namespace RPSLS
     {
         //member variable
         Random randomGesture = new Random();
-       
+
+        public override void GetPlayerName()
+        {
+            name = "Computer Player";
+            Console.WriteLine(name);
+        }
+
         public override void GetPlayerInput()
         {
             Console.WriteLine("\nPlease enter your ATTACK: \n 1) Rock \n 2) Scissors \n 3) Paper \n 4) Lizard \n 5) Spock:");

@@ -11,13 +11,21 @@ namespace RPSLS
         //member variable
         public int gesture;
         public int score;
+        public string name;
         //constructor
-        
+
 
         //member methods
         public virtual void GetPlayerInput()
         {
-            
+
         }
+
+
+        public virtual void GetPlayerName()
+        {
+
+        }
+
     }
 }

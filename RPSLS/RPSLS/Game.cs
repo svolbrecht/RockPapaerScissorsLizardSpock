@@ -18,9 +18,11 @@ namespace RPSLS
         //constructor
 
         //member methods
+
+     
         public void DisplayGestures()
         {
-            Console.WriteLine("\nPossible Gestures");
+            Console.WriteLine("\nPossible Gestures:");
             possibleGestures.ForEach(Console.WriteLine);
         }
     
@@ -51,36 +53,46 @@ namespace RPSLS
 
         public void PlayRound()
         {
+            Console.WriteLine("\n" + player1.name + " make your choice");
             player1.GetPlayerInput();
+            Console.WriteLine("\n" + player2.name + " make your choice");
             player2.GetPlayerInput();
 
+        }
+
+        public void PlayerNames()
+        {
+            Console.WriteLine("\nPlayer 1, enter your name:");
+            player1.GetPlayerName();
+            Console.WriteLine("\nPlayer 2, enter your name:");
+            player2.GetPlayerName();
         }
 
         public void CompareGestures()
         {
             if (player1.gesture == 1 && (player2.gesture == 3|| player2.gesture == 4))
             {
-                Console.WriteLine("\nPlayer1 wins round");
+                Console.WriteLine("\n" + player1.name + " wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 2 && (player2.gesture == 1 || player2.gesture == 5))
             {
-                Console.WriteLine("\nPlayer1 wins round");
+                Console.WriteLine("\n" + player1.name + " wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 3 && (player2.gesture == 3 || player2.gesture == 4))
             {
-                Console.WriteLine("\nPlayer1 wins round");
+                Console.WriteLine("\n" + player1.name + " wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 4 && (player2.gesture == 3 || player2.gesture == 5))
             {
-                Console.WriteLine("\nPlayer1 wins round");
+                Console.WriteLine("\n" + player1.name + " wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == 5 && (player2.gesture == 1 || player2.gesture == 3))
             {
-                Console.WriteLine("\nPlayer1 wins round");
+                Console.WriteLine("\n" + player1.name + " wins round");
                 player1.score += 1;
             }
             else if (player1.gesture == player2.gesture)
@@ -89,27 +101,27 @@ namespace RPSLS
             }
             else
             {
-                Console.WriteLine("\nPlayer2 wins round");
+                Console.WriteLine("\n" + player2.name + " wins round");
                 player2.score += 1;
             }
         }
 
-        public void CompareScore()
+        public void DeclareWinner()
         {
             if(player1.score == 2)
             {
-                Console.WriteLine("\nPlayer1 wins");
+                Console.WriteLine("\n" + player1.name + " wins");
             }
             else if(player2.score == 2)
             {
-                Console.WriteLine("\nPlayer2 wins");
+                Console.WriteLine("\n" + player2.name + " wins");
             }
-            else
-            {
-                PlayRound();
-                CompareGestures();
-                CompareScore();
-            }
+            //else
+            //{
+            //    PlayRound();
+            //    CompareGestures();
+            //    CompareScore();
+            //}
         }
 
         public void PlayAgain()
@@ -135,9 +147,15 @@ namespace RPSLS
             DisplayRules();
             DisplayGestures();
             GetNumberOfPlayers();
+            PlayerNames();
+
+            while(player1.score != 2 && player2.score != 2)
+            {
             PlayRound();
             CompareGestures();
-            CompareScore();
+            }
+
+            DeclareWinner();
             PlayAgain();
         }
     }
